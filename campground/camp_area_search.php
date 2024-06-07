@@ -33,10 +33,10 @@ if(isset($_GET["search"])){
     }
     $sql="SELECT * FROM campground_info WHERE campground_owner_id=$owner_id $orderClause  LIMIT $firstItem, $perPage";
 
-    $pageTitle="營地列表，第 $page 頁";
+    $pageTitle="營區列表，第 $page 頁";
 }else{
     $sql="SELECT id, campground_name , phone, email, position FROM campground_info WHERE campground_owner_id=$owner_id";
-    $pageTitle="營地列表";
+    $pageTitle="營區列表";
     header("location: camp_area_search.php?page=1&order=1");
 }
 
